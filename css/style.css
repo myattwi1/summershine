@@ -60,7 +60,7 @@ ul { list-style: none; }
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  height: 144px;
+  height: clamp(32px, 10vw, 240px);
   width: auto;
   object-fit: contain;
   z-index: 3;
