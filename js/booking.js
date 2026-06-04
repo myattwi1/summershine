@@ -203,7 +203,7 @@ bookingForm.addEventListener('submit', async (e) => {
   const formData = new FormData(bookingForm);
 
   try {
-    const response = await fetch('/', {
+    const response = await fetch('/book.html', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString()
