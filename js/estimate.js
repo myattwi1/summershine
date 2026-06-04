@@ -1,5 +1,6 @@
 // Live estimate calculator
-const PRICE_PER_ITEM = 5;
+const PRICE_PER_PANE = 10;
+const PRICE_PER_SCREEN = 5;
 
 const panesInput  = document.getElementById('windowPanes');
 const screensInput = document.getElementById('screens');
@@ -10,11 +11,11 @@ const bookLink    = document.getElementById('bookFromEstimate');
 function calcTotal() {
   const p = Math.max(0, parseInt(panesInput.value)   || 0);
   const s = Math.max(0, parseInt(screensInput.value) || 0);
-  const total = (p + s) * PRICE_PER_ITEM;
+  const total = p * PRICE_PER_PANE + s * PRICE_PER_SCREEN;
   totalEl.textContent = `$${total}`;
   const parts = [];
-  if (p) parts.push(`${p} pane${p !== 1 ? 's' : ''} ($${p * PRICE_PER_ITEM})`);
-  if (s) parts.push(`${s} screen${s !== 1 ? 's' : ''} ($${s * PRICE_PER_ITEM})`);
+  if (p) parts.push(`${p} pane${p !== 1 ? 's' : ''} ($${p * PRICE_PER_PANE})`);
+  if (s) parts.push(`${s} screen${s !== 1 ? 's' : ''} ($${s * PRICE_PER_SCREEN})`);
   breakdownEl.textContent = parts.length ? parts.join(' + ') : '\u00a0';
 
   // Pass estimate to booking page via sessionStorage
