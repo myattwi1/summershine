@@ -1,0 +1,16 @@
+# Netlify configuration for Summer Shine
+
+[build]
+  publish = "."   # static site — no build step needed
+
+# Redirect bare domain to index
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# Friendly 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404

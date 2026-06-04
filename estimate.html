@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote | Summer Shine</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><span class="brand-sun">☀</span> Summer Shine</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="before-after.html">Before &amp; After</a></li>
+      <li><a href="estimate.html" class="active">Get a Quote</a></li>
+      <li><a href="book.html" class="btn-book">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <section class="page-header">
+    <h1>Instant Estimate</h1>
+    <p>Enter your window counts below and see your price right away — no obligation.</p>
+  </section>
+
+  <section class="estimate-section">
+    <div class="estimate-card">
+      <div class="pricing-legend">
+        <div class="price-badge"><span>Window Panes</span><strong>$5</strong><small>per pane</small></div>
+        <div class="price-badge"><span>Screens</span><strong>$5</strong><small>per screen</small></div>
+      </div>
+
+      <form class="estimate-form" id="estimateForm" novalidate>
+        <div class="form-row">
+          <label for="windowPanes">Window Panes</label>
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="windowPanes" data-action="dec">−</button>
+            <input type="number" id="windowPanes" name="windowPanes" value="0" min="0" max="999" />
+            <button type="button" class="qty-btn" data-target="windowPanes" data-action="inc">+</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="screens">Screens</label>
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-target="screens" data-action="dec">−</button>
+            <input type="number" id="screens" name="screens" value="0" min="0" max="999" />
+            <button type="button" class="qty-btn" data-target="screens" data-action="inc">+</button>
+          </div>
+        </div>
+
+        <div class="estimate-result" id="estimateResult">
+          <p class="result-label">Your Estimate</p>
+          <p class="result-amount" id="totalAmount">$0</p>
+          <p class="result-breakdown" id="breakdown">&nbsp;</p>
+        </div>
+
+        <a href="book.html" class="btn btn-primary btn-full" id="bookFromEstimate">Book This Appointment →</a>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Summer Shine Window Cleaning. All rights reserved.</p>
+    <p>Questions? <a href="mailto:michaelwyattnelson@gmail.com">Contact us</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/estimate.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Before &amp; After | Summer Shine</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><span class="brand-sun">☀</span> Summer Shine</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="before-after.html" class="active">Before &amp; After</a></li>
+      <li><a href="estimate.html">Get a Quote</a></li>
+      <li><a href="book.html" class="btn-book">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <section class="page-header">
+    <h1>Before &amp; After</h1>
+    <p>Drag the slider to reveal the transformation.</p>
+  </section>
+
+  <section class="gallery">
+    <!-- Each .compare-wrapper is a before/after slider -->
+    <!-- Add or remove .compare-wrapper blocks to show more jobs -->
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <div class="compare-wrapper" id="compare-1">
+          <div class="compare-before">
+            <!-- Replace src -->
+            <img src="images/before1.jpg" alt="Before cleaning" />
+            <span class="compare-label">Before</span>
+          </div>
+          <div class="compare-after">
+            <!-- Replace src -->
+            <img src="images/after1.jpg" alt="After cleaning" />
+            <span class="compare-label after-label">After</span>
+          </div>
+          <div class="compare-handle"></div>
+          <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Slide to compare" />
+        </div>
+        <p class="gallery-caption">Residential — 2-story home, 12 windows</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="compare-wrapper" id="compare-2">
+          <div class="compare-before">
+            <img src="images/before2.jpg" alt="Before cleaning" />
+            <span class="compare-label">Before</span>
+          </div>
+          <div class="compare-after">
+            <img src="images/after2.jpg" alt="After cleaning" />
+            <span class="compare-label after-label">After</span>
+          </div>
+          <div class="compare-handle"></div>
+          <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Slide to compare" />
+        </div>
+        <p class="gallery-caption">Commercial — storefront, 4 large panels</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="compare-wrapper" id="compare-3">
+          <div class="compare-before">
+            <img src="images/before3.jpg" alt="Before cleaning" />
+            <span class="compare-label">Before</span>
+          </div>
+          <div class="compare-after">
+            <img src="images/after3.jpg" alt="After cleaning" />
+            <span class="compare-label after-label">After</span>
+          </div>
+          <div class="compare-handle"></div>
+          <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Slide to compare" />
+        </div>
+        <p class="gallery-caption">Residential — post-construction clean</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready for results like these?</h2>
+    <a href="estimate.html" class="btn btn-primary">Get Your Free Quote</a>
+    <a href="book.html" class="btn btn-secondary">Book Appointment</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Summer Shine Window Cleaning. All rights reserved.</p>
+    <p>Questions? <a href="mailto:michaelwyattnelson@gmail.com">Contact us</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>
